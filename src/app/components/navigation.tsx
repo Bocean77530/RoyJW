@@ -7,7 +7,7 @@ import { ShoppingCart } from 'lucide-react';
 export default function Navigation() {
   return (
     
-    <div className="sticky top-0 bg-white dark:bg-gray-900 relative border-b border-gray-200">
+    <div className="sticky top-0 bg-white dark:bg-gray-900 relative border-b border-gray-200 z-50">
       {/* Mega Menu - positioned outside container to span full width */}
       <MegaMenu />
       

@@ -22,8 +22,8 @@ export default function Header() {
   }, []);
 
   return (
-    <div>
-      <header className='text-center bg-black text-white py-2 px-4 relative z-30'>
+    <div >
+      <header className='text-center bg-black text-white py-2 px-4 '>
         <div className='animate-pulse'>
           {typeof messages[currentMessage] === 'string' ? (
             messages[currentMessage]

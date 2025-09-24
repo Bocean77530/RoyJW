@@ -13,8 +13,7 @@ export default function MegaMenu() {
     const menuRef = useRef<HTMLDivElement>(null);
 
     return(
-        <div ref={menuRef} className="absolute left-0 top-0 z-50" onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}>
+        <div ref={menuRef} className="absolute bottom-0 left-0" onClick={() => setIsOpen(!isOpen)}>
             <button
                 type="button"
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white px-4 py-2"

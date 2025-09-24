@@ -1,25 +1,24 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import MegaMenu from './MegaMenu';
 import { User } from 'lucide-react';
 import { Search } from 'lucide-react';
 import { ShoppingCart } from 'lucide-react';
 export default function Navigation() {
   return (
-    <header className="bg-white dark:bg-gray-900 shadow-md">
+    <header className="bg-white dark:bg-gray-900 shadow-md relative">
+      {/* Mega Menu - positioned outside container to span full width */}
+      <MegaMenu />
+      
+      {/* Logo/Brand - positioned in center of header */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 top-4 z-40">
+        <Link href="/" className="flex justify-center items-center">
+          <Image src="/Brand.png" alt="Logo" width={200} height={120} />
+        </Link>
+      </div>
+      
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Shop*/}
-          <div className="items-left justify-left">
-            <Link href="/" className="flex justify-center items-center x-screen">
-              Shop
-            </Link>
-          </div>
-          {/* Logo/Brand */}
-          <div className="flex items-center justify-center h-screen x-screen">
-            <Link href="/" className="flex justify-center items-center x-screen">
-              <Image src="/Brand.png" alt="Logo" width={250} height={150} />
-            </Link>
-          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
@@ -31,13 +30,13 @@ export default function Navigation() {
                 <User />
               </Link>
               <Link
-                href="/about"
+                href="/"
                 className="text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 <Search />
               </Link>
               <Link
-                href="/services"
+                href="/"
                 className="text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 <ShoppingCart />

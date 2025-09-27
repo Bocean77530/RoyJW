@@ -1,6 +1,8 @@
 // components/HorizontalScroller.tsx
 "use client";
 
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export default function HorizontalScroller() {
@@ -143,49 +145,49 @@ export default function HorizontalScroller() {
   ];
 
   return (
-    <div className="relative mx-auto max-w-6xl p-6">
+    <div className="relative w-full p-6">
       {/* Title / header row */}
-      <div className="mb-6 flex items-center justify-between">
+      <div className="mb-6 flex flex-col items-center justify-between">
         <div className="flex items-center gap-4">
           {/* Left Arrow */}
           <button
             aria-label="Scroll left"
-            className={`rounded-full border border-gray-300 p-2 transition ${
-              atStart ? "opacity-40 cursor-not-allowed" : "hover:bg-gray-100"
+            className={` ${
+              atStart ? "opacity-40" : "hover:bg-gray-100"
             }`}
             onClick={() => scrollByAmount("left")}
             disabled={atStart}
           >
-            ←
+            <ChevronLeft/>
           </button>
           
           {/* Title */}
-          <h2 className="text-2xl font-bold">YU-GI-OH!</h2>
+          <h2 className="text-2xl font-bold">ARIES</h2>
           
           {/* Right Arrow */}
           <button
             aria-label="Scroll right"
-            className={`rounded-full border border-gray-300 p-2 transition ${
-              atEnd ? "opacity-40 cursor-not-allowed" : "hover:bg-gray-100"
+            className={`transition ${
+              atEnd ? "opacity-40" : "hover:bg-gray-100"
             }`}
             onClick={() => scrollByAmount("right")}
             disabled={atEnd}
           >
-            →
+            <ChevronRight />
           </button>
         </div>
         
         {/* View All Link */}
-        <a href="#" className="text-sm text-gray-600 hover:text-gray-800 underline">
+        <Link href="/" className="text-sm text-gray-600 hover:text-gray-800 underline">
           VIEW ALL
-        </a>
+        </Link>
       </div>
 
       {/* Scroll track */}
       <div
         ref={trackRef}
         className="group relative flex snap-x snap-mandatory space-x-6 overflow-x-auto scroll-smooth
-                   cursor-grab select-none scrollbar-none"
+                   cursor-grab select-none scrollbar-none px-6"
         onMouseDown={onMouseDown}
         onMouseLeave={onMouseLeave}
         onMouseUp={onMouseUp}
@@ -197,7 +199,7 @@ export default function HorizontalScroller() {
         {products.map((product) => (
           <div
             key={product.id}
-            className="flex w-72 flex-shrink-0 snap-start flex-col bg-white"
+            className="flex w-72 flex-shrink-0 snap-start scroll-ml-6 flex-col bg-white"
           >
             {/* Product Image Container */}
             <div className="relative mb-3 aspect-square overflow-hidden rounded-lg bg-gray-100">

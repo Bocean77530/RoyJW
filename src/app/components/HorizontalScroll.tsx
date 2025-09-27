@@ -139,7 +139,7 @@ export default function HorizontalScroller() {
       name: "Yu-Gi-Oh! x King Ice - Dark Magician Necklace",
       price: 155.00,
       image: "/placeholder-jewelry-6.jpg",
-      labels: ["New arrival"],
+      labels: [],
       reviews: { stars: 4, count: 1 }
     }
   ];
@@ -187,7 +187,7 @@ export default function HorizontalScroller() {
       <div
         ref={trackRef}
         className="group relative flex snap-x snap-mandatory space-x-6 overflow-x-auto scroll-smooth
-                   cursor-grab select-none scrollbar-none px-6"
+                   cursor-grab select-none scrollbar-none px-6 [&::-webkit-scrollbar]:hidden"
         onMouseDown={onMouseDown}
         onMouseLeave={onMouseLeave}
         onMouseUp={onMouseUp}

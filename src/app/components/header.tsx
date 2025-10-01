@@ -37,7 +37,8 @@ export default function Header() {
           )}
         </div>
       </header>
-      <Navigation/>
+      <div className='sticky top-0'><Navigation/></div>
+      
       <Link href='https://www.google.com' className='block bg-white py-4'>
         <div className='text-center'>
           <div className='font-bold text-lg uppercase text-gray-800 mb-1'>TENNIS CHAIN EVENT</div>

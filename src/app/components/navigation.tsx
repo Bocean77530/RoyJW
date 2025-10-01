@@ -7,12 +7,12 @@ import { ShoppingCart } from 'lucide-react';
 export default function Navigation() {
   return (
     
-    <div className="sticky top-0 bg-white dark:bg-gray-900 relative border-b border-gray-200 z-50">
+    <div className=" bg-white dark:bg-gray-900 relative border-b border-gray-200 z-50">
       {/* Mega Menu - positioned outside container to span full width */}
       <MegaMenu />
       
       {/* Logo/Brand - positioned in center of header */}
-      <div className="h-full absolute left-1/2 transform -translate-x-1/2 top-1/2 transform -translate-y-1/2 z-30">
+      <div className="h-full absolute left-1/2 transform -translate-x-1/2 top-1/2  -translate-y-1/2 z-30">
         <Link href="/">
          <Image src="/Brand.png" alt="Logo" width={120} height={50} />
         </Link>

@@ -99,7 +99,7 @@ export default function HorizontalScroller() {
       name: "Yu-Gi-Oh! x King Ice - LE Iced Millennium Puzzle Necklace",
       price: 310.14,
       image: "/placeholder-jewelry-1.jpg",
-      labels: ["Limited Edition", "New arrival"],
+      labels: ["Limited Edition"],
       reviews: null
     },
     {
@@ -115,7 +115,7 @@ export default function HorizontalScroller() {
       name: "Yu-Gi-Oh! x King Ice - Yami Yugi Necklace",
       price: 232.61,
       image: "/placeholder-jewelry-3.jpg",
-      labels: ["New arrival"],
+      labels: [],
       reviews: null
     },
     {

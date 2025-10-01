@@ -14,10 +14,7 @@ export default function Popup() {
     }, []);
 
     return (
-    <div className="relative min-h-screen bg-gray-50 p-6">
-      
-
-      {/* Popup */}
+      <>
       {isPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/50">
           <div className="rounded-lg bg-white p-6 shadow-lg max-w-sm w-full">
@@ -38,6 +35,6 @@ export default function Popup() {
           </div>
         </div>
       )}
-    </div>
+      </>
     );
 }

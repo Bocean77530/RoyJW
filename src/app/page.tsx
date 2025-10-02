@@ -5,6 +5,7 @@ import Navigation from "./components/navigation";
 import Popup from "./components/Popup";
 import HorizontalScroll from "./components/HorizontalScroll";
 import SubShowcase from "./components/SubShowcase";
+import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div>
@@ -26,6 +27,9 @@ export default function Home() {
         <Popup />
       </div>
       
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

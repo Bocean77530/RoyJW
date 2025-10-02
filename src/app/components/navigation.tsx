@@ -14,7 +14,7 @@ export default function Navigation() {
       {/* Logo/Brand - positioned in center of header */}
       <div className="h-full absolute left-1/2 transform -translate-x-1/2 top-1/2  -translate-y-1/2 z-30">
         <Link href="/">
-         <Image src="/Brand.png" alt="Logo" width={120} height={50} />
+         <Image src="/Logo.PNG" alt="Logo" width={120} height={30} />
         </Link>
       </div>
       

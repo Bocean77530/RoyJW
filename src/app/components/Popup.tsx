@@ -42,8 +42,14 @@ export default function Popup() {
 
       {/* Fixed Corner Button */}
       {showCornerButton && (
-        <div className="fixed bottom-4 left-4 z-[9998]">
-          <button
+        <div className="fixed h-12 flex flex-row bottom-4 left-4 z-[9998] bg-gray-800 text-white px-4 py-3 rounded-lg shadow-lg hover:bg-gray-700 transition-colors">
+          <div className="flex items-center gap-2">
+            <button onClick={() => {setShowCornerButton(false);}}>
+              X
+            </button>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
             onClick={() => {setShowCornerButton(false);
               setIsPopup(true);}
             }
@@ -52,6 +58,8 @@ export default function Popup() {
             
             <span className="font-medium">CLAIM FREE SHIPPING</span>
           </button>
+          </div>
+          
         </div>
       )}
       </>

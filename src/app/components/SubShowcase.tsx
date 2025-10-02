@@ -5,6 +5,9 @@ import Image from 'next/image';
 export default function SubShowcase() {
     return (
         <div className="relative w-full h-[600px] overflow-hidden">
+            {/* Collection Introduction */}
+            
+
             {/* Split Background */}
             <div className="absolute inset-0">
                 <Link href="/">

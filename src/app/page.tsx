@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import Header from "./components/header"; 
 import MainShowcase from "./components/MainShowcase";
@@ -15,7 +16,7 @@ export default function Home() {
       </div>
       <div className='sticky top-0 z-50'><Navigation/></div>
       
-      <Link href='https://www.google.com' className='block bg-white py-4'>
+      <Link href='/collections' className='block bg-white py-4'>
         <div className='text-center'>
           <div className='font-bold text-lg uppercase text-gray-800 mb-1'>TENNIS CHAIN EVENT</div>
           <div className='text-gray-700'>

@@ -24,7 +24,7 @@ const FakeData: Product[] = [
         rating: 4.5,
         numReviews: 10,
         description: "random description",
-        image: "/images/tennis-chain-event.jpg"
+        image: "/FakeImage/virgochain.png"
     },
     {
         id: 2,
@@ -37,7 +37,7 @@ const FakeData: Product[] = [
         rating: 4.5,
         numReviews: 10,
         description: "random description",
-        image: "/images/tennis-chain-event.jpg"
+        image: "/FakeImage/virgobrac.png"
     },
     {
         id: 3,
@@ -50,7 +50,7 @@ const FakeData: Product[] = [
         rating: 4.5,
         numReviews: 10,
         description: "random description",
-        image: "/images/tennis-chain-event.jpg"
+        image: "/FakeImage/virgoearring.png"
     },
     {
         id: 4,
@@ -63,12 +63,12 @@ const FakeData: Product[] = [
         rating: 4.5,
         numReviews: 10,
         description: "random description",
-        image: "/images/tennis-chain-event.jpg"
+        image: "/FakeImage/virgoring.png"
     },
     {
         id: 5,
-        name: "Tennis Chain Event",
-        slug: "tennis-chain-event",
+        name: "Tennis Earring",
+        slug: "tennis-earring",
         colors:["Black", "White", "Gray"],
         collections:["Chains", "Bracelets", "Virgo"],
         price: 100,
@@ -76,12 +76,12 @@ const FakeData: Product[] = [
         rating: 4.5,
         numReviews: 10,
         description: "random description",
-        image: "/images/tennis-chain-event.jpg"
+        image: "/FakeImage/tennisearring.png"
     },
     {
         id: 6,
-        name: "Tennis Chain Event",
-        slug: "tennis-chain-event",
+        name: "Tennis Chain",
+        slug: "tennis-chain",
         colors:["Black", "White", "Gray"],
         collections:["Bracelets", "Virgo"],
         price: 100,
@@ -89,12 +89,12 @@ const FakeData: Product[] = [
         rating: 4.5,
         numReviews: 10,
         description: "random description",
-        image: "/images/tennis-chain-event.jpg"
+        image: "/FakeImage/tennischain.png"
     },
     {
         id: 7,
-        name: "Tennis Chain Event",
-        slug: "tennis-chain-event",
+        name: "Tennis Ring",
+        slug: "tennis-ring",
         colors:["Black", "White", "Gray"],
         collections:["Chains", "Virgo"],
         price: 100,
@@ -102,7 +102,7 @@ const FakeData: Product[] = [
         rating: 4.5,
         numReviews: 10,
         description: "random description",
-        image: "/images/tennis-chain-event.jpg"
+        image: "/FakeImage/tennisring.png"
     }
 ]
 

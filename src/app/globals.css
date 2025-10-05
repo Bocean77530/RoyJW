@@ -24,3 +24,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.card {
+  margin-bottom: 1.25rem;
+  display: block;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.primary-button {
+  border-radius: 0.25rem;
+  background-color: #fcd34d;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  outline: none;
+}
+
+.primary-button:hover {
+  background-color: #fbbf24;
+}
+
+.primary-button:active {
+  background-color: #f59e0b;
+}

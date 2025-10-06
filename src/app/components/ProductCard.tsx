@@ -6,7 +6,7 @@ export default function ProductCard({product}: {product: Product}) {
     
     return (
         <div className="card">
-            <Link href={`/product/${product.slug}`}>
+            <Link href={`/products/${product.slug}`}>
                 
                 <Image 
                     src={product.image} 
@@ -19,7 +19,7 @@ export default function ProductCard({product}: {product: Product}) {
             </Link>
 
             <div className="flex flex-col items-center justify-center p-5">
-                <Link href={`/product/${product.slug}`}>
+                <Link href={`/products/${product.slug}`}>
                     
                         <h2 className="text-lg">{product.name}</h2>
                     

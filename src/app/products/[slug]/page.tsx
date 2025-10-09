@@ -25,7 +25,7 @@ export default function ProductPage({ params }: ProductPageProps) {
         <div className='sticky top-0 z-50'>
             <Navigation />
         </div>
-        <Link href='/collections' className='block bg-white py-4'>
+        <Link href='/collection' className='block bg-white py-4'>
         <div className='text-center'>
           <div className='font-bold text-lg uppercase text-gray-800 mb-1'>TENNIS CHAIN EVENT</div>
           <div className='text-gray-700'>

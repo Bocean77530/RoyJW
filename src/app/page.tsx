@@ -8,6 +8,7 @@ import HorizontalScroll from "./components/HorizontalScroll";
 import SubShowcase from "./components/SubShowcase";
 import Footer from "./components/Footer";
 import Link from "next/link";
+import Search from "./components/Search";
 export default function Home() {
   return (
     <div>

@@ -19,7 +19,7 @@ export const defaultSort: SortFilterItem = {
 }
 
 export const SHOPIFY_GRAPHQL_API_ENDPOINT = "/api/2025-10/graphql.json";
-
+export const HIDDEN_PRODUCT_TAG = "nextjs-hidden";
 
 export const sorting: SortFilterItem[] = [
     defaultSort,

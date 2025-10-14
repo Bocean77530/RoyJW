@@ -1,9 +1,12 @@
-import { Grid } from "lucide-react";
+
 import { sorting, defaultSort } from "../lib/constant";
+import { getProducts } from "../lib/shopify";
+import Grid from "../components/grid";
 export async function SearchPage({ searchParams }: { searchParams?: { [key: string]: string | string[] | undefined } }) {
     const { sort, q: searchValue } = searchParams as { [key: string]: string };
     const { sortKey, reverse } = sorting.find((item) => item.slug === sort) || defaultSort;
     const products = await getProducts({ sortKey, reverse, query: searchValue });
+    const resultsText = products.length > 1 ? "results" : "result";
     return (
         <>
             {searchValue ? (
@@ -15,7 +18,7 @@ export async function SearchPage({ searchParams }: { searchParams?: { [key: stri
                 </p>
             ) : null}
 
-            {ProductsList.length > 0 ? (
+            {products.length > 0 ? (
                 <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     <ProductGridItems product={products} />
 

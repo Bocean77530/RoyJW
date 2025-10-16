@@ -10,10 +10,15 @@ const jewelry = [
 
 export default function MegaMenu() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isClient, setIsClient] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
     return(
-        <div ref={menuRef} className="absolute top-1/2 left-5 z-50" onClick={() => setIsOpen(!isOpen)}>
+        <div ref={menuRef} className="absolute top-1/2 left-5 z-50" onClick={() => isClient && setIsOpen(!isOpen)}>
             <button
                 type="button"
                 className="text-gray-600  hover:text-gray-900"
@@ -23,7 +28,7 @@ export default function MegaMenu() {
                 Shop
             </button>
 
-            { isOpen && (
+            { isClient && isOpen && (
                 <div className="absolute left-0 top-full w-screen bg-white shadow-xl ring-1 ring-black/5
                      translate-y-2 md:translate-y-3 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

@@ -1,6 +1,8 @@
 import clsx from "clsx"
 import Image from "next/image"
+import { Lable } from "../lable";
 export function GridTileImage({isInteractive = true, active, label, ...props}:
+
     {isInteractive?: boolean, active?: boolean, label?: {
         title: string,
         amount: string,
@@ -22,7 +24,7 @@ export function GridTileImage({isInteractive = true, active, label, ...props}:
                 </Image>
             ):null}
             {label ? (
-                <Lable title={label.title} amount={label.amount} currencyCode={label.currencyCode} position={label.position} />
+                <Lable title={label.title} amount={label.amount} currencyCode={label.currencyCode} position={label.position || "bottom"} />
             ):null}
         </div>
     )

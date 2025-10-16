@@ -12,13 +12,11 @@ const messages = [
 
 export default function Header() {
   const [currentMessage, setCurrentMessage] = useState(0);
-  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
     const interval = setInterval(() => {
       setCurrentMessage((prev) => (prev + 1) % messages.length);
-    }, 5000); // Change message every 5 seconds
+    }, 5000); // Change message every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -27,29 +25,15 @@ export default function Header() {
     <div >
       <header className='text-center bg-black text-white py-2 px-4 '>
         <div className='animate-pulse'>
-          {!isClient ? (
-            // Show first message during SSR to prevent hydration mismatch
-            typeof messages[0] === 'string' ? (
-              messages[0]
-            ) : (
-              <Link 
-                href={messages[0].link} 
-                className='hover:underline hover:text-gray-300 transition-colors'
-              >
-                {messages[0].text}
-              </Link>
-            )
+          {typeof messages[currentMessage] === 'string' ? (
+            messages[currentMessage]
           ) : (
-            typeof messages[currentMessage] === 'string' ? (
-              messages[currentMessage]
-            ) : (
-              <Link 
-                href={messages[currentMessage].link} 
-                className='hover:underline hover:text-gray-300 transition-colors'
-              >
-                {messages[currentMessage].text}
-              </Link>
-            )
+            <Link 
+              href={messages[currentMessage].link} 
+              className='hover:underline hover:text-gray-300 transition-colors'
+            >
+              {messages[currentMessage].text}
+            </Link>
           )}
         </div>
       </header>
